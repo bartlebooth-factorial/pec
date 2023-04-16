@@ -1,0 +1,28 @@
+;;;  -*- lexical-binding: t; -*-
+;;; builtin-options-setup.el -- Settings for builtin options
+;;;
+
+(setq backup-by-copying t)
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(setq completion-ignore-case t)
+(setq completion-styles '(basic substring partial-completion flex initials orderless))
+(setq custom-file (locate-user-emacs-file "custom-vars.el"))
+(setq delete-old-versions t)
+(setq display-time-day-and-date nil)
+(setq display-time-default-load-average nil)
+(setq eshell-hitory-size 1024)
+(setq gc-cons-threshold 20000000)
+(setq global-auto-revert-non-file-buffers t)
+(setq inferior-lisp-program (executable-find "sbcl"))
+(setq inhibit-startup-screen t)
+(setq initial-buffer-choice "~/csci/todo-csci.org")
+(setq initial-scratch-message ";; Scratch\n\n")
+(setq kept-new-versions 6)
+(setq kept-old-versions 2)
+(setq load-path (append '("/opt/homebrew/share/emacs/site-lisp/lilypond") load-path))
+(setq read-buffer-completion-ignore-case t)
+(setq read-file-name-completion-ignore-case t)
+(setq recentf-max-saved-items 50)
+(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
+(setq use-dialog-box nil)
+(setq version-control t)
