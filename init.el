@@ -2,6 +2,14 @@
 ;;; init.el -- Emacs startup file
 ;;;
 
+;; Platform
+(defcustom myOs "linux"
+  "Variable used to guard settings that only work on Linux or MacOs"
+  :type 'string)
+
+;; Uncomment on MacOs!
+;; (setq myOs "macOs")
+
 ;; Packages
 ;; (load this first so that the remaining *-setup files
 ;; can declare their dependencies with use-package)
