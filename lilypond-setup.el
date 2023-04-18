@@ -2,7 +2,9 @@
 ;;; lilypond-setup.el -- Configure LilyPond mode installed with homebrew
 ;;;
 
-(load-file "/opt/homebrew/share/emacs/site-lisp/lilypond/lilypond-init.el")
+(if (string-equal myOs "macOs")
+    (load-file "/opt/homebrew/share/emacs/site-lisp/lilypond/lilypond-init.el")
+  (load-file "/usr/local/share/emacs/site-lisp/lilypond-init.el"))
 
 (eval-after-load 'flycheck '(require 'flycheck-lilypond))
 
