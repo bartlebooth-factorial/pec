@@ -145,7 +145,8 @@
 (use-package vterm
   :ensure t
   :config
-  (setq vterm-timer-delay nil))
+  (setq vterm-timer-delay nil)
+  (setq vterm-max-scrollback 10000))
 
 (use-package which-key
   :ensure t
