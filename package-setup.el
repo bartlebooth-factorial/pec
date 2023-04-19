@@ -129,9 +129,6 @@
 (use-package rainbow-mode
   :ensure t)
 
-(use-package sly
-  :ensure t)
-
 (use-package swiper
   :ensure t)
   ;; :bind (("C-s" . swiper)))

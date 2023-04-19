@@ -39,6 +39,7 @@
 (load-file (locate-user-emacs-file "programming-setup.el"))
 (load-file (locate-user-emacs-file "c-family-setup.el"))
 (load-file (locate-user-emacs-file "d-setup.el"))
+(load-file (locate-user-emacs-file "lisp-setup.el"))
 (load-file (locate-user-emacs-file "lsp-setup.el"))
 (load-file (locate-user-emacs-file "ocaml-setup.el"))
 
