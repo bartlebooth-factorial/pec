@@ -1,5 +1,5 @@
 ;;;  -*- lexical-binding: t; -*-
-;;; lsp-setup.el -- Setup for Language Server Protocall integration
+;;; lsp-setup.el -- Setup for Language Server Protocol integration
 ;;;
 
 (use-package lsp-mode
