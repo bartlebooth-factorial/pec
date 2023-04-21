@@ -16,9 +16,8 @@
     (toggle-frame-fullscreen))
 
 ;; Bigger font
-(if (string-equal myOs "linux")
-    (set-face-attribute 'default nil :height 180)
-  (set-face-attribute 'default nil :height 220))
+(ifmac (set-face-attribute 'default nil :height 220)
+       (set-face-attribute 'default nil :height 180))
 
 ;; Wrap long lines instead of truncating them
 (set-default 'truncate-lines nil)

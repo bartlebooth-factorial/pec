@@ -3,9 +3,9 @@
 ;;;
 
 ;; Swap meta and super on Linux
-(if (string-equal myOs "linux")
-    (setq  x-meta-keysym 'super
-	   x-super-keysym 'meta))
+(ifmac ()
+       (setq  x-meta-keysym 'super
+	      x-super-keysym 'meta))
 
 (global-set-key (kbd "C-c f") 'toggle-frame-fullscreen)
 (global-set-key (kbd "C-c l") 'display-line-numbers-mode)

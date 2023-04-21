@@ -10,6 +10,11 @@
 ;; Uncomment on MacOs!
 ;; (setq myOs "macOs")
 
+(defmacro ifmac (then &optional else)
+  `(if (string-equal myOs "macOs")
+       ,then
+     ,else))
+
 (defun load-these (files)
   (mapcar
    (lambda (file)
