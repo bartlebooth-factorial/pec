@@ -4,8 +4,6 @@
 
 (setq backup-by-copying t)
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
-(setq completion-ignore-case t)
-(setq completion-styles '(basic substring partial-completion flex initials orderless))
 (setq custom-file (locate-user-emacs-file "custom-vars.el"))
 (setq delete-old-versions t)
 (setq display-time-day-and-date nil)
@@ -18,8 +16,6 @@
 (setq initial-scratch-message ";; Scratch\n\n")
 (setq kept-new-versions 6)
 (setq kept-old-versions 2)
-(setq read-buffer-completion-ignore-case t)
-(setq read-file-name-completion-ignore-case t)
 (setq recentf-max-saved-items 50)
 (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
 (setq use-dialog-box nil)

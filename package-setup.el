@@ -47,14 +47,6 @@
 	 ("C-c C-l" . consult-line)
 	 ("M-g g" . consult-goto-line)))
 
-(use-package corfu
-  :ensure t
-  :init
-  (setq corfu-auto nil)
-  (setq corfu-auto-delay 0)
-  :config
-  (global-corfu-mode 1))
-
 (use-package csv-mode
   :ensure t)
 
@@ -68,6 +60,9 @@
   (add-hook 'dired-mode-hook (lambda ()
 			       (beginend-dired-mode 1)
 			       (local-set-key "," 'dired-hide-dotfiles-mode))))
+
+(use-package edit-indirect
+  :ensure t)
 
 (use-package eglot
   :ensure t)
@@ -110,15 +105,6 @@
 
 (use-package org-bullets
   :ensure t)
-
-(use-package orderless
-  :ensure t)
-
-(use-package pabbrev
-  :ensure t
-  :config
-  (setq pabbrev-idle-timer-verbose nil)
-  (global-pabbrev-mode 1))
 
 (use-package pdf-tools
   :ensure t

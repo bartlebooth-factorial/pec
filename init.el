@@ -35,6 +35,9 @@
 	      ;; * Keybinds
 	      "keys-setup.el"
 
+	      ;; * Completion
+	      "completion-setup.el"
+
 	      ;; * Languages
 	      ;; * * Plaintext, natural, and markup
 	      "plaintext-setup.el"
