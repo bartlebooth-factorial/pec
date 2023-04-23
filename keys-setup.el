@@ -7,8 +7,6 @@
        (setq  x-meta-keysym 'super
 	      x-super-keysym 'meta))
 
-(global-set-key (kbd "C-s") 'consult-line) ; better isearch, works with completion-styles
-
 (global-set-key (kbd "C-c f") 'toggle-frame-fullscreen)
 (global-set-key (kbd "C-c l") 'display-line-numbers-mode)
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
