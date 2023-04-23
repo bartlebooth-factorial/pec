@@ -61,6 +61,13 @@
 			       (beginend-dired-mode 1)
 			       (local-set-key "," 'dired-hide-dotfiles-mode))))
 
+(use-package embark
+  :ensure t
+  :bind (("C-." . embark-act)))
+
+(use-package embark-consult
+  :ensure t)
+
 (use-package edit-indirect
   :ensure t)
 
