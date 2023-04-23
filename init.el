@@ -43,6 +43,7 @@
 	      "plaintext-setup.el"
 	      "poem-setup.el"
 	      "org-setup.el"
+	      "notes-setup.el"
 	      "lilypond-setup.el"
 
 	      ;; * * Programming
