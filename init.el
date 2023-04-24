@@ -50,6 +50,7 @@
 	      "programming-setup.el"
 	      "c-family-setup.el"
 	      "d-setup.el"
+	      "js-setup.el"
 	      "lisp-setup.el"
 	      "lsp-setup.el"
 	      "ocaml-setup.el"))

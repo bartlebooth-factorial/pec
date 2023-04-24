@@ -12,7 +12,9 @@
   (setq denote-prompts '(title keywords file-type)))
 
 (use-package denote-menu
-  :ensure t)
+  :ensure t
+  :init
+  (setq denote-menu-title-column-width 50))
 
 (use-package consult-notes
   :ensure t

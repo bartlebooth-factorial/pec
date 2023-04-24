@@ -17,7 +17,7 @@
 (setq initial-scratch-message ";; Scratch\n\n")
 (setq kept-new-versions 6)
 (setq kept-old-versions 2)
-(setq recentf-max-saved-items 50)
+(setq recentf-max-saved-items 200)
 (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
 (setq use-dialog-box nil)
 (setq version-control t)
