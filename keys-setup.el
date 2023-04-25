@@ -34,5 +34,6 @@
 (global-set-key (kbd "C-z .") 'eshell-other-window)
 (global-set-key (kbd "C-z =") 'edit-config)
 (global-set-key (kbd "C-z SPC") 'consult-recent-file)
+(global-set-key (kbd "C-z g") 'consult-ripgrep)
 (global-set-key (kbd "C-z p") 'package-list-packages)
 (global-set-key (kbd "C-z t") 'ef-themes-select)
