@@ -42,6 +42,7 @@
 	      ;; * * Plaintext, natural, and markup
 	      "plaintext-setup.el"
 	      "poem-setup.el"
+	      "markdown-setup.el"
 	      "org-setup.el"
 	      "notes-setup.el"
 	      "lilypond-setup.el"
