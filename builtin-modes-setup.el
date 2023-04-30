@@ -11,7 +11,6 @@
 
 (column-number-mode 1)
 (display-battery-mode 1)
-(electric-pair-mode 1)
 (global-auto-revert-mode 1)
 (recentf-mode 1)
 (savehist-mode 1)
