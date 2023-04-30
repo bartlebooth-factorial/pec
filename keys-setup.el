@@ -37,3 +37,5 @@
 (global-set-key (kbd "C-z g") 'consult-ripgrep)
 (global-set-key (kbd "C-z p") 'package-list-packages)
 (global-set-key (kbd "C-z t") 'ef-themes-select)
+(global-set-key (kbd "C-z i") 'sp-change-inner)
+(global-set-key (kbd "C-z o") 'sp-change-enclosing)
