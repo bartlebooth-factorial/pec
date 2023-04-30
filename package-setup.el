@@ -124,7 +124,10 @@
 
 (use-package smartparens
   :ensure t
-  (smartparens-global-mode 1))
+  :config
+  (smartparens-global-mode 1)
+  :bind (("C-z i" . sp-change-inner)
+	 ("C-z o" . sp-change-enclosing)))
 
 (use-package swiper
   :ensure t)
