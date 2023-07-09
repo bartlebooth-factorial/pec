@@ -17,4 +17,6 @@
 			    (local-set-key (kbd "M-/") 'cape-ispell)
 			    (setq-local completion-at-point-functions 'cape-ispell)
 			    (setq-local corfu-auto t)
-			    (setq-local corfu-auto-delay 0.2)))
+			    (setq-local corfu-auto-delay 0.2)
+			    (set-fill-column 80)
+			    (auto-fill-mode 1)))

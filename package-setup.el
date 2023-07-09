@@ -61,6 +61,12 @@
 			       (beginend-dired-mode 1)
 			       (local-set-key "," 'dired-hide-dotfiles-mode))))
 
+(use-package dired-preview
+  :ensure t
+  :config
+  (dired-preview-global-mode 1)
+  (setq dired-preview-delay 0.2))
+
 (use-package embark
   :ensure t
   :bind (("C-." . embark-act)))
@@ -122,10 +128,15 @@
 (use-package rainbow-mode
   :ensure t)
 
-(use-package smartparens
+(use-package shell-command-x
   :ensure t
   :config
-  (smartparens-global-mode 1))
+  (shell-command-x-mode 1))
+
+(use-package smartparens
+  :ensure t)
+  ;; :config
+  ;; (smartparens-global-mode 1))
 
 (use-package swiper
   :ensure t)

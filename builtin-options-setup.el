@@ -18,6 +18,7 @@
 (setq kept-new-versions 6)
 (setq kept-old-versions 2)
 (setq recentf-max-saved-items 200)
+(setq tab-bar-show 1)
 (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
 (setq use-dialog-box nil)
 (setq version-control t)
