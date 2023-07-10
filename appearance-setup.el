@@ -8,9 +8,8 @@
 
 (require-theme 'ef-themes)
 
-;; (load-theme 'ef-frost t) ; light
-(load-theme 'ef-kassio t) ; alt light
-;; (load-theme 'ef-night t) ; dark
+;; (load-theme 'ef-kassio t) ; light
+(load-theme 'ef-trio-dark t) ; dark
 
 ;; Ensure fullscreen at startup
 (unless (frame-parameter nil 'fullscreen)
