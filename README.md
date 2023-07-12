@@ -6,7 +6,7 @@ configuration on new systems.
 # Installation
 
 ```sh
-# assuming Emacs is installed ~/init.el and ~/.emacs.d/ do not exist
+# assuming Emacs is installed, and ~/.emacs.d/ does not exist
 mkdir ~/.emacs.d
 cd ~/.emacs.d
 git clone https://github.com/bartlebooth-factorial/pec.git
