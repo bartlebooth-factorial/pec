@@ -10,5 +10,6 @@
 (ifmac (eval-after-load 'flycheck '(require 'flycheck-lilypond)))
 
 (add-hook 'LilyPond-mode-hook (lambda ()
-				(flycheck-mode)))
+				(flycheck-mode 1)
+				(display-line-numbers-mode 1)))
 
