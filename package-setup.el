@@ -18,7 +18,7 @@
 
 (use-package accent
   :ensure t
-  :bind ("C-x M-a" . accent-menu))
+  :bind ("C-x C-a" . accent-menu))
 
 (use-package ace-window
   :ensure t)
@@ -64,7 +64,7 @@
 (use-package dired-preview
   :ensure t
   :config
-  (dired-preview-global-mode 1)
+  (dired-preview-global-mode 0)
   (setq dired-preview-delay 0.2))
 
 (use-package embark

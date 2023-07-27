@@ -31,6 +31,7 @@
 	      ;; * Builtins
 	      "builtin-modes-setup.el"
 	      "builtin-options-setup.el"
+	      "tabs-setup.el"
 
 	      ;; * Keybinds
 	      "keys-setup.el"
