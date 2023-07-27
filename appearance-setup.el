@@ -9,15 +9,19 @@
 (require-theme 'ef-themes)
 
 ;; (load-theme 'ef-kassio t) ; light
-(load-theme 'ef-trio-dark t) ; dark
+(ifmac (load-theme 'ef-maris-dark t)
+       (load-theme 'ef-winter)) ; dark
 
 ;; Ensure fullscreen at startup
 (unless (frame-parameter nil 'fullscreen)
     (toggle-frame-fullscreen))
 
 ;; Bigger font
-(ifmac (set-face-attribute 'default nil :height 190)
+(ifmac (set-face-attribute 'default nil :height 200)
        (set-face-attribute 'default nil :height 180))
+
+(ifmac (set-face-attribute 'default nil :family "Menlo"))
+(ifmac (set-face-attribute 'default nil :family "Iosevka Comfy"))
 
 ;; ;; Wrap long lines instead of truncating them
 ;; (set-default 'truncate-lines nil)
