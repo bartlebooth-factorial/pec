@@ -20,11 +20,10 @@
 (ifmac (set-face-attribute 'default nil :height 200)
        (set-face-attribute 'default nil :height 180))
 
-(ifmac (set-face-attribute 'default nil :family "Menlo"))
+;; (ifmac (set-face-attribute 'default nil :family "Menlo"))
 (ifmac (set-face-attribute 'default nil :family "Iosevka Comfy"))
 
-;; ;; Wrap long lines instead of truncating them
-;; (set-default 'truncate-lines nil)
+;; Truncate long lines (wrapping causes too much visual interference)
 (set-default 'truncate-lines t)
 
 ;; Show the current time in the modeline
