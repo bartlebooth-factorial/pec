@@ -22,3 +22,8 @@
 (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
 (setq use-dialog-box nil)
 (setq version-control t)
+
+(ifmac nil
+ (progn
+   (setq native-comp-async-report-warnings-errors 'silent)
+   (setq native-compile-prune-cache t)))
