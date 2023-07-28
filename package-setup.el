@@ -42,6 +42,9 @@
 
 (use-package consult
   :ensure t
+  :config
+  (setq register-preview-delay 0.8
+        register-preview-function #'consult-register-format)
   :bind (("C-c b" . consult-buffer)
 	 ("C-c C-f" . consult-recent-file)
 	 ("C-c C-l" . consult-line)

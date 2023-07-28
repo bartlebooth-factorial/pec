@@ -4,6 +4,7 @@
 
 (setq backup-by-copying t)
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(setq bookmark-save-flag 1)
 (ifmac (setq confirm-kill-emacs (lambda (prompt) (yes-or-no-p "Quit?"))))
 (setq custom-file (locate-user-emacs-file "custom-vars.el"))
 (setq delete-old-versions t)
