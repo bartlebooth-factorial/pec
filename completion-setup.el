@@ -11,6 +11,7 @@
 (setq completion-ignore-case t)
 (setq read-buffer-completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)
+(setq bookmark-completion-ignore-case t)
 (setq completion-category-defaults nil)
 (setq completion-category-overrides '((file (styles . (partial-completion)))))
 
@@ -27,7 +28,7 @@
   (corfu-quit-at-boundary nil)   ;; Never quit at completion boundary
   (corfu-quit-no-match t)        ;; Never quit, even if there is no match
   (corfu-preview-current nil)    ;; Disable current candidate preview
-  (corfu-preselect 'first)            ;; Preselect the prompt
+  (corfu-preselect 'first)       ;; Preselect the prompt
   (corfu-on-exact-match nil)     ;; Configure handling of exact matches
   (corfu-scroll-margin 5)        ;; Use scroll margin
   :init
@@ -45,5 +46,5 @@
 ;;   :ensure t
 ;;   :config
 ;;   (setq pabbrev-idle-timer-verbose nil)
-;;   (global-pabbrev-mode 0))
+;;   (global-pabbrev-mode 1))
 

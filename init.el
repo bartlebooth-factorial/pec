@@ -25,6 +25,9 @@
 	      ;; (load this first so that the remaining *-setup files
 	      ;; can declare their dependencies with use-package)
 
+	      ;; * Custom functions
+	      "functions-setup.el"
+
 	      ;; * Appearance
 	      "appearance-setup.el"
 
