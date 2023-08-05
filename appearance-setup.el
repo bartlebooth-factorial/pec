@@ -28,3 +28,6 @@
 
 ;; Show the current time in the modeline
 (display-time)
+
+;; Smooth scrolling
+(pixel-scroll-precision-mode 1)
