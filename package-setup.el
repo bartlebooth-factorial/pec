@@ -6,6 +6,8 @@
 
 (add-to-list 'package-archives '("MELPA" . "http://melpa.org/packages/"))
 
+(setq package-install-upgrade-builtin t)
+
 (package-initialize)
 
 (require 'use-package)
@@ -69,6 +71,11 @@
   :config
   (dired-preview-global-mode 0)
   (setq dired-preview-delay 0.2))
+
+(use-package eat
+  :ensure t
+  :config
+  (eat-eshell-mode 1))
 
 (use-package embark
   :ensure t
@@ -142,9 +149,9 @@
   ;; (smartparens-global-mode 1))
 
 (use-package swiper
-  :ensure t)
-  ;; :bind (("C-s" . swiper)))
-	 ;; ("C-r" . swiper-backward)))
+  :ensure t) ;
+  ;; :bind  (("C-s" . swiper)
+	  ;; ("C-r" . swiper-backward)))
 
 (use-package vertico
   :ensure t
