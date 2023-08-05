@@ -6,4 +6,5 @@
 
 (add-hook 'markdown-mode-hook (lambda ()
 				(auto-fill-mode 1)
-				(setq-local fill-column 80)))
+				(setq-local fill-column 80)
+				(setq-local completion-at-point-functions 'cape-dabbrev)))
