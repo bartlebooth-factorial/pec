@@ -13,7 +13,7 @@
   (setq tab-bar-new-tab-choice t)
   (setq tab-bar-new-tab-to 'right)
   (setq tab-bar-position nil)
-  (setq tab-bar-show nil)
+  (setq tab-bar-show 1)
   (setq tab-bar-tab-hints nil)
   (setq tab-bar-tab-name-function 'tab-bar-tab-name-all)
 
