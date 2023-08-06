@@ -6,5 +6,4 @@
 			   (org-bullets-mode 1)
 			   (org-indent-mode 1)
 			   (setq captain-predicate
-				 (lambda () (not (org-in-src-block-p))))
-			   (local-set-key "" 'consult-recent-file)))
+				 (lambda () (not (org-in-src-block-p))))))
