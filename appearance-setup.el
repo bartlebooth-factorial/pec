@@ -13,8 +13,8 @@
        (load-theme 'ef-winter t)) ; dark
 
 ;; Ensure fullscreen at startup
-(unless (frame-parameter nil 'fullscreen)
-    (toggle-frame-fullscreen))
+(ifmac (unless (frame-parameter nil 'fullscreen)
+    (toggle-frame-fullscreen)))
 
 ;; Bigger font
 (ifmac (set-face-attribute 'default nil :height 200)
