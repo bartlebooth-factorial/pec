@@ -42,6 +42,9 @@
 	      ;; * Completion
 	      "completion-setup.el"
 
+	      ;; * Email
+	      "mail-setup.el"
+
 	      ;; * Languages
 	      ;; * * Plaintext, natural, and markup
 	      "plaintext-setup.el"
