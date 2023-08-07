@@ -15,6 +15,17 @@
   (add-hook 'notmuch-search-mode-hook (lambda ()
 					(setq-local notmuch-search-oldest-first nil))))
 
+;; modeline indicator for number of unread messages
+(use-package notmuch-indicator
+  :ensure t
+  :init
+  (setq notmuch-indicator-args '((:terms "tag:unread and tag:inbox" :label "@"))
+	notmuch-indicator-refresh-count 10
+	notmuch-indicator-force-refresh-commands '(notmuch-refresh-this-buffer)
+	notmuch-indicator-hide-empty-counters nil)
+  :config
+  (notmuch-indicator-mode 1))
+
 ;; for sending mail
 (setq send-mail-function 'sendmail-send-it
       sendmail-program (executable-find "msmtp")
