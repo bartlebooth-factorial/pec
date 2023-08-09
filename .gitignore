@@ -7,4 +7,5 @@
 
 !init.el
 !*-setup.el
+!*-setup-*.el
 
