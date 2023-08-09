@@ -7,9 +7,8 @@
 
 (require-theme 'ef-themes)
 
-;; (load-theme 'ef-kassio t) ; light
 (ifmac (load-theme 'ef-maris-dark t)
-       (load-theme 'ef-winter t)) ; dark
+       (load-theme 'ef-winter t))
 
 ;; Ensure fullscreen at startup
 (ifmac (unless (frame-parameter nil 'fullscreen)
