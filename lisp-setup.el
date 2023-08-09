@@ -3,7 +3,7 @@
 ;;;
 
 (use-package sly
-  :ensure t)
+  :defer t)
 
 (setq inferior-lisp-program (executable-find "sbcl"))
 

@@ -12,4 +12,3 @@
 (add-hook 'LilyPond-mode-hook (lambda ()
 				(flycheck-mode 1)
 				(display-line-numbers-mode 1)))
-

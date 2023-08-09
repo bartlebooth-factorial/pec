@@ -21,7 +21,7 @@
      (load-file (locate-user-emacs-file file)))
    files))
 
-(load-these '("package-setup.el"
+(load-these '("package-setup-optm.el"
 	      ;; (load this first so that the remaining *-setup files
 	      ;; can declare their dependencies with use-package)
 

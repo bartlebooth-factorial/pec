@@ -2,13 +2,10 @@
 ;;; plaintext-setup.el -- Customizations for writing plain text
 ;;;
 
+(setq sentence-end-double-space nil)
+
 ;; Capitalization
 (use-package captain
-  :ensure t
-  :init
-  (setq sentence-end-double-space nil)
-  :config
-  (global-captain-mode 0)
   :bind ("C-c u" . captain-capitalize-word))
 
 (add-hook 'text-mode-hook (lambda ()

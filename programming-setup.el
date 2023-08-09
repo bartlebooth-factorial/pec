@@ -3,11 +3,7 @@
 ;;;
 
 (use-package cape
-  :ensure t
   :bind ("M-/" . cape-dabbrev))
-
-(use-package captain
-  :ensure t)
 
 (add-hook 'prog-mode-hook (lambda ()
 			    (setq-local completion-at-point-functions '(cape-dabbrev cape-keyword))

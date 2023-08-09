@@ -4,7 +4,6 @@
 
 ;; for reading mail
 (use-package notmuch
-  :ensure t
   :init
   (setq notmuch-fcc-dirs nil
 	notmuch-hello-thousands-separator ","
@@ -17,7 +16,6 @@
 
 ;; modeline indicator for number of unread messages
 (use-package notmuch-indicator
-  :ensure t
   :init
   (setq notmuch-indicator-args '((:terms "tag:unread and tag:inbox" :label "@"))
 	notmuch-indicator-refresh-count 10

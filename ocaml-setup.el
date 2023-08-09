@@ -3,7 +3,7 @@
 ;;;
 
 (use-package tuareg
-  :ensure t)
+  :defer t)
 
 (let ((opam-share (ignore-errors (car (process-lines "opam" "var" "share")))))
       (when (and opam-share (file-directory-p opam-share))

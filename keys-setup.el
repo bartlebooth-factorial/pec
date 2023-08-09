@@ -3,9 +3,9 @@
 ;;;
 
 ;; Swap meta and super on Linux
-(ifmac ()
-       (setq  x-meta-keysym 'super
-	      x-super-keysym 'meta))
+(ifmac nil
+       (setq x-meta-keysym 'super
+	     x-super-keysym 'meta))
 
 ;; Tweaks to default bindings
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window) ; better buffer menu

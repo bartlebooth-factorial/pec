@@ -3,7 +3,7 @@
 ;;;
 
 (use-package lsp-mode
-  :ensure t)
+  :defer t)
 
 (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration)
 

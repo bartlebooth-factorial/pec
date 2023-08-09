@@ -3,8 +3,7 @@
 ;;;
 
 ;; Use the wonderful ef-themes
-(use-package ef-themes
-  :ensure t)
+(use-package ef-themes)
 
 (require-theme 'ef-themes)
 

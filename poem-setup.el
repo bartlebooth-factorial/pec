@@ -3,7 +3,6 @@
 ;;;
 
 (use-package olivetti
-  :ensure t
   :bind ("C-c o" . olivetti-mode))
 
 (add-to-list 'auto-mode-alist

@@ -3,7 +3,7 @@
 ;;;
 
 (use-package denote
-  :ensure t
+  :bind ("C-z n n" . denote)
   :init
   (setq denote-directory "~/files/text/notes")
   (setq denote-known-keywords nil)
@@ -12,17 +12,12 @@
   (setq denote-prompts '(title keywords file-type)))
 
 (use-package denote-menu
-  :ensure t
+  :bind ("C-z n l" . denote-menu-list-notes)
   :init
   (setq denote-menu-title-column-width 50))
 
 (use-package consult-notes
-  :ensure t
+  :bind ("C-z n SPC" . consult-notes)
   :init
   (setq consult-notes-sources
         `(("Notes"  ?n ,denote-directory))))
-
-(global-set-key (kbd "C-z n n") 'denote)
-(global-set-key (kbd "C-z n l") 'denote-menu-list-notes)
-(global-set-key (kbd "C-z n SPC") 'consult-notes)
-

@@ -3,7 +3,6 @@
 ;;;
 
 (use-package angular-mode
-  :ensure t
   :defer t)
 
 (add-hook 'js-mode-hook (lambda ()
