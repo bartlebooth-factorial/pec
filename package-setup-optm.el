@@ -100,11 +100,21 @@
 (use-package pdf-tools
   :hook (doc-view-mode . pdf-tools-install))
 
+(use-package pulsar
+  :hook ((next-error . (lambda ()
+			(setq-local pulsar-highlight-face 'pulsar-red)
+			(pulsar-highlight-line)))
+	 (isearch-mode-end . pulsar-pulse-line)))
+
 (use-package rainbow-mode
   :defer t)
 
 (use-package shell-command+
   :bind ("M-!" . shell-command+))
+
+(use-package spacious-padding
+  :config
+  (spacious-padding-mode 1))
 
 (use-package smartparens)
 
