@@ -17,8 +17,8 @@
 (use-package corfu
   :custom
   (corfu-auto t)
-  (corfu-auto-delay 0.0)
-  (corfu-auto-prefix 2)
+  (corfu-auto-delay 0.4)
+  (corfu-auto-prefix 3)
   (corfu-cycle t)              ;; Enable cycling for `corfu-next/previous'
   (corfu-echo-delay 0.25)
   (corfu-separator ?\s)        ;; Orderless field separator
