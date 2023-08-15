@@ -5,6 +5,7 @@
 (setq markdown-fontify-code-blocks-natively t)
 
 (add-hook 'markdown-mode-hook (lambda ()
-				(auto-fill-mode 1)
+				(setq-local completion-at-point-functions 'cape-dabbrev)
 				(setq-local fill-column 80)
-				(setq-local completion-at-point-functions 'cape-dabbrev)))
+				(auto-fill-mode 1)
+				(flyspell-mode 1)))

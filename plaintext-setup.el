@@ -15,4 +15,5 @@
 			    (setq-local corfu-auto t)
 			    (setq-local corfu-auto-delay 0.2)
 			    (set-fill-column 80)
-			    (auto-fill-mode 1)))
+			    (auto-fill-mode 1)
+			    (flyspell-mode 1)))
