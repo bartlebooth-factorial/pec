@@ -20,6 +20,7 @@
 (global-set-key (kbd "C-z [") 'find-file-at-point)
 (global-set-key (kbd "C-z f") 'toggle-frame-fullscreen)
 (global-set-key (kbd "C-z g") 'consult-ripgrep)
+(global-set-key (kbd "C-z h") 'hl-line-mode)
 (global-set-key (kbd "C-z i") 'sp-change-inner)
 (global-set-key (kbd "C-z l") 'display-line-numbers-mode)
 (global-set-key (kbd "C-z o") 'sp-change-enclosing)
