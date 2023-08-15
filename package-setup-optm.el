@@ -113,7 +113,8 @@
   :bind ("M-!" . shell-command+))
 
 (use-package spacious-padding
-  :hook (after-init . spacious-padding-mode))
+  :hook ((after-init . spacious-padding-mode)
+	 (server-after-make-frame . spacious-padding-mode)))
 
 (use-package smartparens)
 
