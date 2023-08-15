@@ -113,8 +113,7 @@
   :bind ("M-!" . shell-command+))
 
 (use-package spacious-padding
-  :config
-  (spacious-padding-mode 1))
+  :hook (after-init . spacious-padding-mode))
 
 (use-package smartparens)
 
