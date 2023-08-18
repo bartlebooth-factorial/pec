@@ -118,6 +118,13 @@
 
 (use-package smartparens)
 
+(use-package substitute
+  :bind (("M-# b" . substitute-target-in-buffer)
+	 ("M-# d" . substitute-target-in-defun)
+	 ("M-# s" . substitute-target-below-point)
+	 ("M-# r" . substitute-target-above-point))
+  :config (add-to-list 'substitute-post-replace-hook 'substitute-report-operation))
+
 (use-package vertico
   :config
   (vertico-mode 1))
