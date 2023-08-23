@@ -18,7 +18,7 @@
     (eshell-send-input)))
 
 (defun gd ()
-  "Fuzzy directory jumper"
+  "Goto Directory"
   (interactive)
   (let ((target-dir (completing-read
 		     "Directory: "
