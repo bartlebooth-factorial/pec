@@ -16,3 +16,13 @@
     (eshell/cd (substring curdir (length "Directory ")))
     (eshell/clear-scrollback)
     (eshell-send-input)))
+
+(defun gd ()
+  "Fuzzy directory jumper"
+  (interactive)
+  (let ((target-dir (completing-read
+		     "Directory: "
+		     (with-temp-buffer
+		       (insert-file-contents "/home/eric/.gd_idx.txt")
+		       (split-string (buffer-string) "\n" t)))))
+    (dired target-dir)))

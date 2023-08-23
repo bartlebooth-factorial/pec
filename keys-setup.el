@@ -18,6 +18,7 @@
 (global-set-key (kbd "C-z =") 'edit-config)
 (global-set-key (kbd "C-z SPC") 'consult-recent-file)
 (global-set-key (kbd "C-z [") 'find-file-at-point)
+(global-set-key (kbd "C-z d") 'gd)
 (global-set-key (kbd "C-z f") 'toggle-frame-fullscreen)
 (global-set-key (kbd "C-z g") 'consult-ripgrep)
 (global-set-key (kbd "C-z h") 'hl-line-mode)
