@@ -17,12 +17,14 @@
     (eshell/clear-scrollback)
     (eshell-send-input)))
 
-(defun gd ()
+(defun gd (&optional arg)
   "Goto Directory"
-  (interactive)
+  (interactive "P")
   (let ((target-dir (completing-read
 		     "Directory: "
 		     (with-temp-buffer
 		       (insert-file-contents "/home/eric/.gd_idx.txt")
 		       (split-string (buffer-string) "\n" t)))))
-    (dired target-dir)))
+    (if arg
+	(dired-other-window target-dir)
+	(dired target-dir))))
