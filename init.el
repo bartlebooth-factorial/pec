@@ -61,6 +61,7 @@
 	      "js-setup.el"
 	      "lisp-setup.el"
 	      "lsp-setup.el"
+	      "python-setup.el"
 	      "ocaml-setup.el"))
 
 ;; M-x customize
