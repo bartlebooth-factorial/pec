@@ -14,7 +14,7 @@
 (setq gc-cons-threshold 20000000)
 (setq global-auto-revert-non-file-buffers t)
 (setq inhibit-startup-screen t)
-(setq initial-buffer-choice t)
+(setq initial-buffer-choice "~/csci/todo-csci.org")
 (setq initial-scratch-message ";; Scratch\n\n")
 (setq kept-new-versions 6)
 (setq kept-old-versions 2)
@@ -29,3 +29,5 @@
  (progn
    (setq native-comp-async-report-warnings-errors 'silent)
    (setq native-compile-prune-cache t)))
+
+(add-to-list 'exec-path "/Library/TeX/texbin")
