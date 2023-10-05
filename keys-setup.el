@@ -20,6 +20,7 @@
 (global-set-key (kbd "C-z [") 'find-file-at-point)
 (global-set-key (kbd "C-z {") 'beginning-of-defun)
 (global-set-key (kbd "C-z }") 'end-of-defun)
+(global-set-key (kbd "C-z c") 'copy-line)
 (global-set-key (kbd "C-z d") 'gd)
 (global-set-key (kbd "C-z f") 'toggle-frame-fullscreen)
 (global-set-key (kbd "C-z g") 'consult-ripgrep)
@@ -31,3 +32,5 @@
 (global-set-key (kbd "C-z s") 'consult-line)
 (global-set-key (kbd "C-z t") 'ef-themes-select)
 (global-set-key (kbd "C-z w") 'whitespace-mode)
+(global-set-key (kbd "C-z C-a") 'incr-num-at-point)
+(global-set-key (kbd "C-z C-x") 'decr-num-at-point)
