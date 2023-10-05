@@ -7,5 +7,7 @@
 
 (add-hook 'org-mode-hook (lambda ()
 			   (org-indent-mode 1)
+			   (abbrev-mode 1)
 			   (setq captain-predicate
-				 (lambda () (not (org-in-src-block-p))))))
+				 (lambda () (not (org-in-src-block-p))))
+			   (local-set-key (kbd "C-c h") 'consult-org-heading)))
