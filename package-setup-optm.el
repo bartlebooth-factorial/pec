@@ -102,7 +102,6 @@
 
 (use-package pulsar
   :hook ((next-error . (lambda ()
-			(setq-local pulsar-highlight-face 'pulsar-red)
 			(pulsar-highlight-line)))
 	 (isearch-mode-end . pulsar-pulse-line)))
 
