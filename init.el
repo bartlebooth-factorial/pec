@@ -30,6 +30,7 @@
 
 	      ;; * Appearance
 	      "appearance-setup.el"
+	      "mode-line-setup.el"
 
 	      ;; * Builtins
 	      "builtin-modes-setup.el"
