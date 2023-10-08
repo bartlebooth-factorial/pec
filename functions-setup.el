@@ -39,9 +39,7 @@
 			    "Directory: "
 			    (with-temp-buffer
 			      (insert-file-contents "/home/eric/.gd_idx.txt")
-			      (split-string (buffer-string) "\n" t))
-			    (lambda (line)
-			      (file-directory-p line)))))
+			      (split-string (buffer-string) "\n" t)))))
 	   (if arg
 	       (dired-other-window target-dir)
 	     (dired target-dir)))))
