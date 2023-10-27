@@ -3,11 +3,14 @@
 ;;;
 
 ;; Use the wonderful ef-themes
-(use-package ef-themes)
+(use-package ef-themes
+  :config
+  (setq ef-melissa-dark-palette-overrides
+        '((prompt yellow-warmer))))
 
 (require-theme 'ef-themes)
 
-(ifmac (load-theme 'ef-maris-dark t)
+(ifmac (load-theme 'ef-melissa-dark t)
        (load-theme 'ef-winter t))
 
 ;; Ensure fullscreen at startup
