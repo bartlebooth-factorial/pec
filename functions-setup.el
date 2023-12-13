@@ -94,3 +94,13 @@
     (move-end-of-line 1)
     (activate-mark)
     (kill-ring-save nil nil t)))
+
+
+
+(defun scroll-up-one ()
+  (interactive)
+  (scroll-up-command 1))
+
+(defun scroll-down-one ()
+  (interactive)
+  (scroll-down-command 1))

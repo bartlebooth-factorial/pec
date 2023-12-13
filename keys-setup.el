@@ -3,9 +3,9 @@
 ;;;
 
 ;; Swap meta and super on Linux
-(ifmac nil
-       (setq x-meta-keysym 'super
-	     x-super-keysym 'meta))
+;; (ifmac nil
+;;        (setq x-meta-keysym 'super
+;; 	     x-super-keysym 'meta))
 
 ;; Tweaks to default bindings
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window) ; better buffer menu
@@ -40,3 +40,5 @@
 (global-set-key (kbd "C-z '") 'origami-close-node)
 (global-set-key (kbd "C-z :") 'origami-open-node)
 (global-set-key (kbd "C-z ;") 'origami-open-node-recursively)
+(global-set-key (kbd "M-n") 'scroll-up-one)
+(global-set-key (kbd "M-p") 'scroll-down-one)
