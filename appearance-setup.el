@@ -8,9 +8,13 @@
   (setq ef-melissa-dark-palette-overrides
         '((prompt yellow-warmer))))
 
+(use-package modus-themes)
+
 (require-theme 'ef-themes)
 
-(ifmac (load-theme 'ef-melissa-dark t)
+(require-theme 'modus-themes)
+
+(ifmac (load-theme 'modus-vivendi-tinted t)
        (load-theme 'ef-winter t))
 
 ;; Ensure fullscreen at startup
