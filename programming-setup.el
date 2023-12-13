@@ -10,3 +10,5 @@
 			    (setq captain-predicate
 				  (lambda () (nth 8 (syntax-ppss (point)))))
 			    (display-line-numbers-mode 1)))
+
+(add-to-list 'auto-mode-alist '("\\.pl\\'" . prolog-mode))
