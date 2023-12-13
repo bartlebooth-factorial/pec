@@ -41,6 +41,14 @@
 	       (dired-other-window target-dir)
 	     (dired target-dir)))))
 
+(defun update-directory-index ()
+  (interactive)
+  (async-shell-command "~/scripts/s3/gd -u"))
+
+(defun update-git-repos ()
+  (interactive)
+  (async-shell-command "~/scripts/pullall"))
+
 (defun change-num-at-point (change-func)
   "Replace the number under the point with (change-func number)"
   (if (number-at-point)
