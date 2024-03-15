@@ -36,6 +36,7 @@
 	      "builtin-modes-setup.el"
 	      "builtin-options-setup.el"
 	      "tabs-setup.el"
+	      "dired-setup.el"
 
 	      ;; * Keybinds
 	      "keys-setup.el"
