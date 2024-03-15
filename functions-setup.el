@@ -104,3 +104,40 @@
 (defun scroll-down-one ()
   (interactive)
   (scroll-down-command 1))
+
+
+
+(defun goto-line-num-at-point-in-recent-file ()
+  "Modified version of `consult-recent-file' that jumps to line
+number of `number-at-point' upon file selection"
+  (interactive)
+  (let ((line-num (number-at-point)))
+    (if line-num
+	(progn
+	  (find-file
+	   (consult--read
+	    (or
+	     (mapcar #'consult--fast-abbreviate-file-name (bound-and-true-p recentf-list))
+	     (user-error "No recent files, `recentf-mode' is %s"
+			 (if recentf-mode "enabled" "disabled")))
+	    :prompt (format "Goto line %d in recent file: " line-num)
+	    :sort nil
+	    :require-match t
+	    :category 'file
+	    :state (consult--file-preview)
+	    :history 'file-name-history))
+	  (goto-line line-num))
+      (message "No number-at-point found"))))
+
+
+
+(defun set-font-height-in-pts (pts)
+  (set-face-attribute 'default nil :height (* 10 pts)))
+
+(defun change-font-size ()
+  (interactive)
+  (let* ((common-sizes
+	  (mapcar #'number-to-string '(8 10 12 14 16 18 20)))
+	 (size-in-pts
+	 (completing-read "Enter the new font size in pts: " common-sizes)))
+    (set-font-height-in-pts (string-to-number size-in-pts))))

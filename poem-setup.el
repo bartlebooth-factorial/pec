@@ -3,7 +3,7 @@
 ;;;
 
 (use-package olivetti
-  :bind ("C-c o" . olivetti-mode))
+  :bind ("C-z O" . olivetti-mode))
 
 (add-to-list 'auto-mode-alist
              '("\\.poem\\'" . (lambda ()

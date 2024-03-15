@@ -10,6 +10,7 @@
 ;; Tweaks to default bindings
 (global-set-key (kbd "C-x C-b") 'ibuffer-other-window) ; better buffer menu
 (global-set-key (kbd "C-x C-d") 'dired) ; Don't accidentally call list-directory
+(global-set-key (kbd "M-y") 'consult-yank-from-kill-ring) ; better yank-from-kill-ring
 
 ;; Custom bindings
 (global-unset-key (kbd "C-z"))
@@ -30,8 +31,10 @@
 (global-set-key (kbd "C-z l") 'display-line-numbers-mode)
 (global-set-key (kbd "C-z o") 'sp-change-enclosing)
 (global-set-key (kbd "C-z p") 'package-list-packages)
+(global-set-key (kbd "C-z q") 'logos-focus-mode)
 (global-set-key (kbd "C-z s") 'consult-line)
 (global-set-key (kbd "C-z t") 'ef-themes-select)
+(global-set-key (kbd "C-z T") 'modus-themes-select)
 (global-set-key (kbd "C-z u d") 'update-directory-index)
 (global-set-key (kbd "C-z u g") 'update-git-repos)
 (global-set-key (kbd "C-z w") 'whitespace-mode)
@@ -40,5 +43,6 @@
 (global-set-key (kbd "C-z '") 'origami-close-node)
 (global-set-key (kbd "C-z :") 'origami-open-node)
 (global-set-key (kbd "C-z ;") 'origami-open-node-recursively)
+(global-set-key (kbd "C-z #") 'goto-line-num-at-point-in-recent-file)
 (global-set-key (kbd "M-n") 'scroll-up-one)
 (global-set-key (kbd "M-p") 'scroll-down-one)

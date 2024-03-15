@@ -122,11 +122,33 @@
 	 ("C-<" . mc/mark-previous-like-this)
 	 ("C-c C->" . mc/mark-all-like-this)))
 
+(use-package logos
+  :commands logos-focus-mode
+  ;; :bind ("C-z q" . logos-focus-mode)
+  :config
+  (setq logos-hide-mode-line t
+	logos-olivetti t)
+  (let ((map global-map))
+    (define-key map [remap narrow-to-region] #'logos-narrow-dwim)
+    (define-key map [remap forward-page] #'logos-forward-page-dwim)
+    (define-key map [remap backward-page] #'logos-backward-page-dwim))
+  (repeat-mode 1))
+
+(use-package olivetti
+  :config
+  (setq olivetti-body-width 0.6))
+
 (use-package origami
   :config (global-origami-mode))
 
 (use-package pdf-tools
   :hook (doc-view-mode . pdf-tools-install))
+
+(use-package proof-general
+  :config
+  (setq proof-splash-enable nil))
+  ;; (add-hook 'coq-mode-hook (lambda ()
+  ;; 			     (abbrev-mode 0))))
 
 (use-package pulsar
   :hook ((next-error . (lambda ()
