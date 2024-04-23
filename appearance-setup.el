@@ -6,7 +6,9 @@
 (use-package ef-themes
   :config
   (setq ef-melissa-dark-palette-overrides
-        '((prompt yellow-warmer))))
+        '((prompt yellow-warmer))
+	ef-dream-palette-overrides
+	'((prose-done green-warmer))))
 
 (use-package modus-themes)
 
