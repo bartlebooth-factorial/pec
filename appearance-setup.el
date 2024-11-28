@@ -16,7 +16,7 @@
 
 (require-theme 'modus-themes)
 
-(ifmac (load-theme 'modus-vivendi-tinted t)
+(ifmac (load-theme 'ef-maris-dark t)
        (load-theme 'ef-winter t))
 
 ;; Ensure fullscreen at startup
