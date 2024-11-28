@@ -2,23 +2,27 @@
 ;;; completion-setup.el -- Configurations for (auto) completion
 ;;;
 
+;; Hotfuzz (new): better version of the builtin `flex' completion
+;; style
+(use-package hotfuzz)
+
 ;; Orderless: brilliant completion style that I use everywhere
 (use-package orderless
-  :config (setq completion-styles '(orderless basic)))
+  :config (setq completion-styles '(orderless hotfuzz basic)))
 
 (setq completion-ignore-case t)
 (setq read-buffer-completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)
 (setq bookmark-completion-ignore-case t)
 (setq completion-category-defaults nil)
-(setq completion-category-overrides '((file (styles . (partial-completion)))))
+(setq completion-category-overrides '((file (styles . (partial-completion hotfuzz)))))
 
 ;; Corfu: frontend for auto completion with various backends
 (use-package corfu
   :custom
   (corfu-auto t)
-  (corfu-auto-delay 0.4)
-  (corfu-auto-prefix 3)
+  (corfu-auto-delay 0.1)
+  (corfu-auto-prefix 2)
   (corfu-cycle t)              ;; Enable cycling for `corfu-next/previous'
   (corfu-echo-delay 0.25)
   (corfu-separator ?\s)        ;; Orderless field separator
@@ -33,7 +37,7 @@
   (corfu-history-mode)
   (global-corfu-mode))
 
-(setq completion-cycle-threshold 3)
+(setq completion-cycle-threshold 1)
 (setq tab-always-indent 'complete)
 
 ;; Pabbrev: a great simple completion solution.
