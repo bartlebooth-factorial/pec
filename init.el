@@ -71,3 +71,4 @@
 ;; M-x customize
 (setq custom-file (locate-user-emacs-file "custom-vars.el"))
 (load custom-file 'noerror 'nomessage)
+(put 'narrow-to-region 'disabled nil)
