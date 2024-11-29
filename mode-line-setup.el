@@ -5,9 +5,10 @@
 (use-package diminish
   :demand t
   :config
-  (diminish 'auto-revert-mode "autoRev")
-  (diminish 'beginend-global-mode)
-  (diminish 'beginend-outline-mode)
-  (diminish 'eldoc-mode "doc")
+  (diminish 'auto-revert-mode)
+  (mapcar (lambda (mode) (diminish mode))
+	  (mapcar #'cdr beginend-modes))
+  (diminish 'eldoc-mode)
   (diminish 'which-key-mode)
   (diminish 'yas-minor-mode))
+
