@@ -12,8 +12,10 @@
 (global-set-key (kbd "C-x C-d") 'dired) ; Don't accidentally call list-directory
 (global-set-key (kbd "M-y") 'consult-yank-from-kill-ring) ; better yank-from-kill-ring
 
+(global-set-key (kbd "C-x c") 'restart-emacs) ; easy restart
+
 ;; Custom bindings
-(global-unset-key (kbd "C-z"))
+; (global-unset-key (kbd "C-z")) <-- This line is now in `./init.el'
 (global-set-key (kbd "C-z ,") 'vterm-other-window)
 (global-set-key (kbd "C-z .") 'eshell-other-window)
 (global-set-key (kbd "C-z 6") 'file-info-show)
@@ -40,9 +42,6 @@
 (global-set-key (kbd "C-z w") 'whitespace-mode)
 (global-set-key (kbd "C-z {") 'beginning-of-defun)
 (global-set-key (kbd "C-z }") 'end-of-defun)
-(global-set-key (kbd "C-z '") 'origami-close-node)
-(global-set-key (kbd "C-z :") 'origami-open-node)
-(global-set-key (kbd "C-z ;") 'origami-open-node-recursively)
 (global-set-key (kbd "C-z #") 'goto-line-num-at-point-in-recent-file)
 (global-set-key (kbd "M-n") 'scroll-up-one)
 (global-set-key (kbd "M-p") 'scroll-down-one)
