@@ -2,19 +2,23 @@
 ;;; notes-setup.el -- Note-taking infrastructure
 ;;;
 
+;; denote config from Prot!
 (use-package denote
-  :bind ("C-z n n" . denote)
-  :init
-  (setq denote-directory "~/files/text/notes")
-  (setq denote-known-keywords nil)
-  (setq denote-infer-keywords t)
-  (setq denote-sort-keywords t)
-  (setq denote-prompts '(title keywords file-type)))
+  :demand t
+  :hook (dired-mode . denote-dired-mode)
+  :bind
+  (("C-z n n" . denote)
+   ("C-z n r" . denote-rename-file)
+   ("C-z n l" . denote-link)
+   ("C-z n b" . denote-backlinks))
+  :config
+  (setq denote-directory (expand-file-name "~/files/text/notes/"))
 
-(use-package denote-menu
-  :bind ("C-z n l" . denote-menu-list-notes)
-  :init
-  (setq denote-menu-title-column-width 50))
+  ;; Automatically rename Denote buffers when opening them so that
+  ;; instead of their long file name they have a literal "[D]"
+  ;; followed by the file's title.  Read the doc string of
+  ;; `denote-rename-buffer-format' for how to modify this.
+  (denote-rename-buffer-mode 1))
 
 (use-package consult-notes
   :bind ("C-z n SPC" . consult-notes)
