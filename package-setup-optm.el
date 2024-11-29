@@ -4,7 +4,9 @@
 
 (require 'package)
 
-(add-to-list 'package-archives '("MELPA" . "http://melpa.org/packages/"))
+;; (add-to-list 'package-archives '("MELPA" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 (setq package-install-upgrade-builtin t)
 
