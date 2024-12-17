@@ -17,6 +17,22 @@
     (eshell/clear-scrollback)
     (eshell-send-input)))
 
+(defun consult-recent-file-other-window ()
+  "Find recent file using `completing-read'."
+  (interactive)
+  (find-file-other-window
+   (consult--read
+    (or
+     (mapcar #'consult--fast-abbreviate-file-name (bound-and-true-p recentf-list))
+     (user-error "No recent files, `recentf-mode' is %s"
+                 (if recentf-mode "enabled" "disabled")))
+    :prompt "Find recent file: "
+    :sort nil
+    :require-match t
+    :category 'file
+    :state (consult--file-preview)
+    :history 'file-name-history)))
+
 (ifmac (defun gd (&optional arg)
 	 "Goto Directory"
 	 (interactive "P")
@@ -141,3 +157,39 @@ number of `number-at-point' upon file selection"
 	 (size-in-pts
 	 (completing-read "Enter the new font size in pts: " common-sizes)))
     (set-font-height-in-pts (string-to-number size-in-pts))))
+
+(defun xah-unfill-paragraph ()
+  "Replace newline chars in current paragraph by single spaces.
+This command does the inverse of `fill-paragraph'.
+
+URL `http://xahlee.info/emacs/emacs/emacs_unfill-paragraph.html'
+Version 2016-07-13"
+  (interactive)
+  (let ((fill-column most-positive-fixnum))
+    (fill-paragraph)))
+
+(defmacro defun-login-shell-command (fun-name cmd-string &optional output-buffer-name)
+  "Define an interactive function which runs cmd-string in a zsh shell with
+  my usual login environment"
+  `(defun ,fun-name ()
+     (interactive)
+     (async-shell-command (concat "zsh -c \"source ~/.zshrc && " ,cmd-string "\"")
+			  (or ,output-buffer-name ,cmd-string))))
+
+(defun-login-shell-command
+ pw-git-pull "cd ~/web/personal-website && git pull --ff-only")
+
+(defun-login-shell-command
+ pw-git-push "cd ~/web/personal-website && git push origin main")
+
+(defun-login-shell-command
+ pw-build "cd ~/web/personal-website && hugo")
+
+(defun-login-shell-command
+ pw-serve "cd ~/web/personal-website && hugo serve"
+ "hugo serve")
+
+(defun-login-shell-command
+ pw-serve-disable-fast-render "cd ~/web/personal-website && hugo serve --disableFastRender"
+ "hugo serve (disable fast render)")
+

@@ -14,6 +14,10 @@
 
 (global-set-key (kbd "C-x c") 'restart-emacs) ; easy restart
 
+(global-set-key (kbd "C-<tab>") 'other-window) ; easy window switch
+(global-set-key (kbd "C-S-<tab>") 'tab-next) ; (remap tab switch)
+
+
 ;; Custom bindings
 ; (global-unset-key (kbd "C-z")) <-- This line is now in `./init.el'
 (global-set-key (kbd "C-z ,") 'vterm-other-window)
@@ -23,7 +27,9 @@
 (global-set-key (kbd "C-z C-a") 'incr-num-at-point)
 (global-set-key (kbd "C-z C-x") 'decr-num-at-point)
 (global-set-key (kbd "C-z SPC") 'consult-recent-file)
+(global-set-key (kbd "C-z S-SPC") 'consult-recent-file-other-window)
 (global-set-key (kbd "C-z [") 'find-file-at-point)
+(global-set-key (kbd "C-z b") 'consult-buffer)
 (global-set-key (kbd "C-z c") 'copy-line)
 (global-set-key (kbd "C-z d") 'gd)
 (global-set-key (kbd "C-z f") 'toggle-frame-fullscreen)
@@ -45,3 +51,10 @@
 (global-set-key (kbd "C-z #") 'goto-line-num-at-point-in-recent-file)
 (global-set-key (kbd "M-n") 'scroll-up-one)
 (global-set-key (kbd "M-p") 'scroll-down-one)
+(global-set-key (kbd "M-Q") 'xah-unfill-paragraph)
+(global-set-key (kbd "C-z ; w b") 'pw-build)
+(global-set-key (kbd "C-z ; w s") 'pw-serve)
+(global-set-key (kbd "C-z ; w S") 'pw-serve-disable-fast-render)
+(global-set-key (kbd "C-z ; w u") 'pw-git-pull)
+(global-set-key (kbd "C-z ; w p") 'pw-git-push)
+
