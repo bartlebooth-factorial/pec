@@ -42,6 +42,7 @@
 (global-set-key (kbd "C-z q") 'logos-focus-mode)
 (global-set-key (kbd "C-z s") 'consult-line)
 (global-set-key (kbd "C-z t") 'ef-themes-select)
+(global-set-key (kbd "C-z C-t") 'ef-themes-toggle)
 (global-set-key (kbd "C-z T") 'modus-themes-select)
 (global-set-key (kbd "C-z u d") 'update-directory-index)
 (global-set-key (kbd "C-z u g") 'update-git-repos)

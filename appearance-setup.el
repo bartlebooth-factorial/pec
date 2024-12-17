@@ -10,7 +10,9 @@
 	ef-melissa-light-palette-overrides
 	'((bg-mode-line bg-blue-intense))
 	ef-dream-palette-overrides
-	'((prose-done green-warmer))))
+	'((prose-done green-warmer)))
+  (setq ef-themes-to-toggle
+	'(ef-day ef-dream)))
 
 (use-package modus-themes)
 
@@ -18,7 +20,7 @@
 
 (require-theme 'modus-themes)
 
-(ifmac (load-theme 'ef-maris-dark t)
+(ifmac (load-theme 'ef-dream t)
        (load-theme 'ef-winter t))
 
 ;; Ensure fullscreen at startup
