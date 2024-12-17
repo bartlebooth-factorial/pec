@@ -62,6 +62,7 @@
 	      "programming-setup.el"
 	      "c-family-setup.el"
 	      "d-setup.el"
+	      "html-setup.el"
 	      "js-setup.el"
 	      "lisp-setup.el"
 	      "lsp-setup.el"
