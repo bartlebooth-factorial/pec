@@ -7,6 +7,8 @@
   :config
   (setq ef-melissa-dark-palette-overrides
         '((prompt yellow-warmer))
+	ef-melissa-light-palette-overrides
+	'((bg-mode-line bg-blue-intense))
 	ef-dream-palette-overrides
 	'((prose-done green-warmer))))
 
