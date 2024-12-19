@@ -166,7 +166,9 @@
   (ido-yes-or-no-mode 1))
 
 (use-package magit
-  :defer t)
+  :defer t
+  :config
+  (keymap-set magit-section-mode-map "C-<tab>" #'other-window))
 
 (use-package marginalia
   :config
