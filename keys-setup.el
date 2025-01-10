@@ -22,6 +22,7 @@
 ; (global-unset-key (kbd "C-z")) <-- This line is now in `./init.el'
 (global-set-key (kbd "C-z ,") 'vterm-other-window)
 (global-set-key (kbd "C-z .") 'eshell-other-window)
+(global-set-key (kbd "C-z 1") 'consult-todo)
 (global-set-key (kbd "C-z 6") 'file-info-show)
 (global-set-key (kbd "C-z =") 'edit-config)
 (global-set-key (kbd "C-z C-a") 'incr-num-at-point)
