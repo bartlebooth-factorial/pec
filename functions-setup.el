@@ -39,7 +39,7 @@
 	 (let ((target-dir (completing-read
 			    "Directory: "
 			    (with-temp-buffer
-			      (insert-file-contents "~/.gd_idx.txt")
+			      (insert-file-contents "~/.gd_idx")
 			      (split-string (buffer-string) "\n" t)))))
 	   (if arg
 	       (dired-other-window target-dir)
@@ -51,7 +51,7 @@
 	 (let ((target-dir (completing-read
 			    "Directory: "
 			    (with-temp-buffer
-			      (insert-file-contents "/home/eric/.gd_idx.txt")
+			      (insert-file-contents "/home/eric/.gd_idx")
 			      (split-string (buffer-string) "\n" t)))))
 	   (if arg
 	       (dired-other-window target-dir)
@@ -59,11 +59,11 @@
 
 (defun update-directory-index ()
   (interactive)
-  (async-shell-command "~/scripts/s3/gd -u"))
+  (async-shell-command "~/scripts/s3/gd -u" "gd -u"))
 
 (defun update-git-repos ()
   (interactive)
-  (async-shell-command "~/scripts/pullall"))
+  (async-shell-command "~/scripts/pullall" "pullall"))
 
 (defun change-num-at-point (change-func)
   "Replace the number under the point with (change-func number)"
@@ -190,6 +190,21 @@ Version 2016-07-13"
  "hugo serve")
 
 (defun-login-shell-command
- pw-serve-disable-fast-render "cd ~/web/personal-website && hugo serve --disableFastRender"
+ pw-serve-disable-fast-render
+ "rm -rf ~/web/personal-website/public; cd ~/web/personal-website && hugo serve --disableFastRender"
  "hugo serve (disable fast render)")
 
+(defun calc-hmsify (h-m-s-list)
+  (let ((h (car h-m-s-list))
+	(m (cadr h-m-s-list))
+	(s (caddr h-m-s-list)))
+    (concat h (string-to-list "@")
+	    m (string-to-list "'")
+	    s (string-to-list "\""))))
+
+(defun convert-time-string (str)
+  "Convert a time-string from colon-format to calc format, e.g. 2:30:16 ->
+  2@ 30' 16\""
+  (let* ((h-m-s-list
+	  (-split-on (car (string-to-list ":")) (string-to-list str))))
+    (mapconcat #'string (calc-hmsify h-m-s-list))))
