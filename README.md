@@ -9,7 +9,7 @@ configuration on new systems.
 # assuming Emacs is installed, and ~/.emacs.d/ does not exist
 mkdir ~/.emacs.d
 cd ~/.emacs.d
-git clone https://github.com/bartlebooth-factorial/pec.git
+git clone https://github.com/emfred-dot-com/pec.git
 ```
 
 # Documentation
